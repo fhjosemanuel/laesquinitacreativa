@@ -8,20 +8,20 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="public/img/marca/La Esquinita Creativa.ico" rel="icon">
+    <link href="./public/img/marca/La Esquinita Creativa.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://sfonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="resource/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./resources/lib/owlcarousel/owl.carousel.min.js" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="resource/css/style.css" rel="stylesheet">
+    <link href="./resources/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -51,9 +51,15 @@
                     <a class="text-white px-2" href="">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="text-white pl-2" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+                    <?php
+                        session_start();
+                        if (isset($_SESSION['user_name'])) {
+                        echo "<a class='text-white px-2' href'#'>¡Hola, " . $_SESSION['user_name'] . "!</a>";
+                        } else {
+                        echo "Iniciar sesión";
+                        }
+                    ?>
+
                 </div>
             </div>
         </div>
@@ -585,15 +591,15 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./resources/lib/easing/easing.min.js"></script>
+    <script src="./resources/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    <script src="./resources/mail/jqBootstrapValidation.min.js"></script>
+    <script src="./resources/mail/contact.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="./resources/js/main.js"></script>
 </body>
 
 </html>
