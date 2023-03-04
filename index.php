@@ -98,7 +98,7 @@
 
     <!-- Productos -->
 
-    <div class="container-fluid pt-5 m-3">
+    <div class="container-fluid pt-5">
         Productos disponibles
     </div>
 
