@@ -78,7 +78,7 @@ function sendEmail($name, $destinatary, $subject, $url_confirmation){
 
       //Enviar el mensaje
       $mail->send();
-      header('Location: ../../../../index.php');
+      header('Location: ../../../../laesquinitacreativa/index.php');
       exit();
   } catch (Exception $e) {
       echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

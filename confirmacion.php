@@ -15,7 +15,7 @@
   // Verificar que la URL de confirmación tiene la estructura correcta
   $url_parts = parse_url($_SERVER['REQUEST_URI']);
   if (!isset($url_parts['query']) || empty($verification_code) || empty($email)) {
-      header('Location: ./index.html');
+      header('Location: ./index.php');
       exit();
   }
 
