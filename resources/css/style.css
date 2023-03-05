@@ -6352,6 +6352,7 @@ button.bg-dark:focus {
 
 .d-flex {
   display: flex !important;
+  justify-content: center;
 }
 
 .d-inline-flex {
@@ -6628,7 +6629,7 @@ button.bg-dark:focus {
 }
 
 .align-items-center {
-  align-items: center !important;
+  align-items: center!important;
 }
 
 .align-items-baseline {
