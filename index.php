@@ -62,7 +62,7 @@
                             echo '<a class="dropdown-item" href="#">Carrito de compra</a>';
                             //Si el correo electrónico no está validado mostrará la opción para validarlo.
                             if(!$_SESSION['validated']){
-                                echo '<a class="dropdown-item" href="#">Validar correo electrónico</a>';
+                                echo '<a class="dropdown-item" href="./resources/controllers/emailValidation.php?email=' . $_SESSION['user_email'] . '&name=' . $_SESSION['user_name'] . '">Validar correo electrónico</a>';
                             }
                             echo '<div class="dropdown-divider"></div>';
                             echo '<a class="dropdown-item" href="./resources/controllers/logout.php">Cerrar sesión</a>';
@@ -74,8 +74,6 @@
                             echo '</button>';
                         }
                     ?>
-
-        
 
                 </div>
             </div>

@@ -29,7 +29,7 @@
     if (mysqli_query($connect, $consulta)) {
       // El registro se insertó correctamente
       echo 'El registro se realizó correctamente.';
-      validar($email, $name);
+      validate($email, $name);
     } else {
       // Hubo un error al insertar el registro
       http_response_code(400); // Establecer código de estado HTTP 400 (Bad Request)
