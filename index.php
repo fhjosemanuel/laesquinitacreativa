@@ -54,9 +54,24 @@
                     <?php
                         session_start();
                         if (isset($_SESSION['user_name'])) {
-                        echo "<a class='text-white px-2' href'#'>¡Hola, " . $_SESSION['user_name'] . "!</a>";
+                            echo '<div class="dropdown">';
+                            echo '<button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+                            echo "¡Hola, " . $_SESSION['user_name'] . "!";
+                            echo '</button>';
+                            echo '<div class="dropdown-menu">';
+                            echo '<a class="dropdown-item" href="#">Carrito de compra</a>';
+                            //Si el correo electrónico no está validado mostrará la opción para validarlo.
+                            if(!$_SESSION['validated']){
+                                echo '<a class="dropdown-item" href="./resources/controllers/emailValidation.php?email=' . $_SESSION['user_email'] . '&name=' . $_SESSION['user_name'] . '">Validar correo electrónico</a>';
+                            }
+                            echo '<div class="dropdown-divider"></div>';
+                            echo '<a class="dropdown-item" href="./resources/controllers/logout.php">Cerrar sesión</a>';
+                            echo '</div>';
+                            echo '</div>';
                         } else {
-                        echo "Iniciar sesión";
+                            echo '<button type="button" class="btn btn-primary btn-sm">';
+                            echo '<a class="a-nav px-2" href="./login.html">Iniciar sesión</a>';
+                            echo '</button>';
                         }
                     ?>
 

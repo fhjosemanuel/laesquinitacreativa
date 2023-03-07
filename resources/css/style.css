@@ -2374,9 +2374,22 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary:hover {
-  color: var(--pink);
+  border-radius: 7px;
   background-color: var(--white);
+  color: var(--pink);
   border-color: var(--pink);
+}
+
+.btn-primary a{
+  color: var(--white);
+}
+
+.btn-primary:hover a {
+  color: var(--pink);
+}
+
+.dropdown-item:hover{
+  background-color: var(--pink-light)!important;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -6339,6 +6352,7 @@ button.bg-dark:focus {
 
 .d-flex {
   display: flex !important;
+  justify-content: center;
 }
 
 .d-inline-flex {
@@ -6615,7 +6629,7 @@ button.bg-dark:focus {
 }
 
 .align-items-center {
-  align-items: center !important;
+  align-items: center!important;
 }
 
 .align-items-baseline {

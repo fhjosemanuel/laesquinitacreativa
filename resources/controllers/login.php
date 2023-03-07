@@ -30,7 +30,8 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
       session_start();
       $_SESSION['user_id'] = $usuario['id'];
       $_SESSION['user_name'] = $usuario['name'];
-      echo 'Inicio de sesión correcto.';
+      $_SESSION['user_email'] = $usuario['email'];
+      $_SESSION['validated'] = $usuario['validated'];
     } else {
       // Contraseña incorrecta
       http_response_code(400); // Establecer código de estado HTTP 400 (Bad Request)

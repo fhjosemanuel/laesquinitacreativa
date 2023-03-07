@@ -46,8 +46,8 @@ function registerValidation() {
         processData: false,
         contentType: false,
         success: function(response) {
-          $("#message").html(`<p class='success-message'>${response}</p>`);
-          window.location.href = '../../index.html';
+          // $("#message").html(`<p class='success-message'>${response}</p>`);
+          window.location.href = '../../index.php';
         },
         error: function(xhr, status, error) {
           var errorMessage = xhr.responseText;
