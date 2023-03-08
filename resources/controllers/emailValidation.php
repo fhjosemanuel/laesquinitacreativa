@@ -46,6 +46,14 @@ function generateVerificationCode($email){
   return $code;
 }
 
+// Cargar las variables de entorno del archivo .env
+$dotenv = parse_ini_file(__DIR__ . '/../../.env');
+
+// Agregar las variables de entorno a la sesión de PHP
+foreach ($dotenv as $key => $value) {
+    putenv("$key=$value");
+}
+
 function sendEmail($name, $destinatary, $subject, $url_confirmation){
 
   //Credenciales configuracion PHPMail

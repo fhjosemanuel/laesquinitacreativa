@@ -1,5 +1,13 @@
 <?php
 
+// Cargar las variables de entorno del archivo .env
+$dotenv = parse_ini_file(__DIR__ . '/../../.env');
+
+// Agregar las variables de entorno a la sesión de PHP
+foreach ($dotenv as $key => $value) {
+    putenv("$key=$value");
+}
+
 function conectar() {
   $db_host = getenv('DB_HOST');
   $db_name = getenv('DB_NAME');
