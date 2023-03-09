@@ -22,7 +22,7 @@ function validate($email, $name)
   $verification_code = generateVerificationCode($email);
 
   // Crear la URL de confirmación
-  $url_confirmation = "http://localhost/laesquinitacreativa/confirmacion.php?email=" . urlencode($email) . "&token=" . urlencode($verification_code);
+  $url_confirmation = "http://laesquinitacreativa.test/confirmacion.php?email=" . urlencode($email) . "&token=" . urlencode($verification_code);
 
   // Enviar el correo electrónico
   $subject = "Confirmación de correo electrónico";
@@ -92,7 +92,7 @@ function sendEmail($name, $destinatary, $subject, $url_confirmation){
 
       //Enviar el mensaje
       $mail->send();
-      header('Location: ../../../../laesquinitacreativa/index.php');
+      header('Location: ../../../../index.php');
       exit();
   } catch (Exception $e) {
       echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

@@ -25,14 +25,14 @@ function loginValidation() {
 
       // Enviar solicitud AJAX
       $.ajax({
-        url: "../laesquinitacreativa/resources/controllers/login.php",
+        url: "../resources/controllers/login.php",
         method: "POST",
         data: formData,
         processData: false,
         contentType: false,
         success: function(response) {
           $("#message").html(`<p class='success-message'>${response}</p>`);
-          window.location.replace("../../laesquinitacreativa/index.php");
+          window.location.replace("../../index.php");
         },
         error: function(xhr, status, error) {
           var errorMessage = xhr.responseText;

@@ -8,6 +8,6 @@
   }
 
   // Redirigimos al usuario a la página de inicio de sesión o a cualquier otra página
-  header('Location: ../../../../laesquinitacreativa/index.php');
+  header('Location: ../../../../index.php');
   exit();
 ?>
