@@ -21,20 +21,63 @@
     <link href="../../resources/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" rel="stylesheet" />
     <link href="../../resources/css/style.css" rel="stylesheet">
 </head>
 <body>
     <header id="header"></header>
 
     <main>
+        <div class="container-fluid pt-5">
+            Productos disponibles
+        </div>
+        <!-- Categories Start -->
+        <div class="container-fluid pt-5">
+            <div class="row px-xl-5 pb-3" id="verProductos">
+            </div>
+        </div>
+        <!-- Categories End -->
     </main>
 
     <footer id="footer"></footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script src="../../resources/js/components.js"></script>
     <script>
         window.addEventListener("load", headerShow);
         window.addEventListener("load", footerShow);
+        let verProductos = document.getElementById("verProductos");
+
+        function mostrarProductos() {
+            const valores = window.location.search;
+            const urlParams = new URLSearchParams(valores);
+            
+
+            let ajax = new XMLHttpRequest();
+
+            if (window.XMLHttpRequest) {
+                ajax = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                ajax = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            ajax.onreadystatechange = function() {
+                if( this.readyState === 4 && this.status === 200 ) {
+                    verProductos.innerHTML = this.responseText;
+                }
+            }
+
+            
+            
+            if(urlParams.has('categoria')){
+                var categoria = urlParams.get('categoria');
+                ajax.open("GET", "../../ajax/products/products.php?categoria="+categoria, true);
+            } else {
+                ajax.open("GET", "../../ajax/products/products.php", true);
+            }
+            ajax.send();
+        }
+        window.addEventListener("load", mostrarProductos);
     </script>
 </body>
 </html>

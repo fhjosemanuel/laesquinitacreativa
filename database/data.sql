@@ -64,14 +64,14 @@
     INSERT INTO products (id, name, description, price, category_id)
         VALUES (10, 'Funda para Galaxy Tab S6 Lite con soporte para bolígrafo', 'Soporte integrado para bolígrafo S, hace que tu S Pen sea tan seguro como tu tablet todo el tiempo.', 300.30, 4);
             INSERT INTO galleries (url, product_id)
-                VALUES ('public/img/categorias/mochilas/fundaparagalaxytab.jpg', 10);
+                VALUES ('public/img/categorias/fundas/fundaparagalaxytab.jpg', 10);
 
     INSERT INTO products (id, name, description, price, category_id)
         VALUES (11, 'Melsbrinna Soporte para pasaporte', 'Hermoso diseño combinado: nuestro combo de soporte para pasaporte tiene 2 ranuras de plástico transparente y 1 ranura para pasaporte para combinar nuestro pasaporte, billetes de avión y algunas tarjetas, y la otra ranura de plástico transparente para guardar algunos documentos importantes como nuestra tarjeta de identificación o licencias de conducir, lo que puede garantizar que no olvidemos tomar o incluso nuestro retrato familiar.', 348.00, 4);
             INSERT INTO galleries (url, product_id)
-                VALUES ('public/img/categorias/mochilas/melsbrinnasoporteparapasaporte.jpg', 11);
+                VALUES ('public/img/categorias/fundas/melsbrinnasoporteparapasaporte.jpg', 11);
 
     INSERT INTO products (id, name, description, price, category_id)
         VALUES (12, 'Funda para carpeta de informes con clip, paquete de 10', 'El paquete de 10 portadas de informes de clip da a los informes un aspecto profesional elegante', 322.58, 4);
             INSERT INTO galleries (url, product_id)
-                VALUES ('public/img/categorias/mochilas/melsbrinnasoporteparapasaporte.jpg', 12);
+                VALUES ('public/img/categorias/fundas/fundaparacarpeta.jpg', 12);

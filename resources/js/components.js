@@ -143,3 +143,6 @@ function footerShow(){
     let footerHTML = document.getElementById("footer");
     footerHTML.innerHTML = footer;
 }
+function myAlert(titulo, mensaje) {
+    alertify.alert(titulo, mensaje);
+}
