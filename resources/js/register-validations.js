@@ -40,14 +40,14 @@ function registerValidation() {
 
       // Enviar solicitud AJAX
       $.ajax({
-        url: "../resources/controllers/register.php",
+        url: "../laesquinitacreativa/resources/controllers/register.php",
         method: "POST",
         data: formData,
         processData: false,
         contentType: false,
         success: function(response) {
           // $("#message").html(`<p class='success-message'>${response}</p>`);
-          window.location.href = '../../index.php';
+          window.location.href = '../laesquinitacreativa/index.php';
         },
         error: function(xhr, status, error) {
           var errorMessage = xhr.responseText;

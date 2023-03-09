@@ -46,7 +46,21 @@ function generateVerificationCode($email){
   return $code;
 }
 
+// Cargar las variables de entorno del archivo .env
+$dotenv = parse_ini_file(__DIR__ . '/../../.env');
+
+// Agregar las variables de entorno a la sesión de PHP
+foreach ($dotenv as $key => $value) {
+    putenv("$key=$value");
+}
+
 function sendEmail($name, $destinatary, $subject, $url_confirmation){
+
+  //Credenciales configuracion PHPMail
+  $mail_host = getenv('MAIL_HOST');
+  $mail_port = getenv('MAIL_PORT');
+  $mail_username = getenv('MAIL_USERNAME');
+  $mail_password = getenv('MAIL_PASSWORD');
 
   //Create an instance; passing `true` enables exceptions
   $mail = new PHPMailer(true);
@@ -54,14 +68,14 @@ function sendEmail($name, $destinatary, $subject, $url_confirmation){
   try {
       //Server settings
       $mail->isSMTP();                                            //Send using SMTP
-      $mail->Host       = 'sandbox.smtp.mailtrap.io';             //Set the SMTP server to send through
+      $mail->Host       = $mail_host;                             //Set the SMTP server to send through
       $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-      $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-      $mail->Username   = '9dcc4c8b719236';                       //SMTP username
-      $mail->Password   = '066b13ff8e46d7';                       //SMTP password
+      $mail->Port       = $mail_port;                             //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+      $mail->Username   = $mail_username;                         //SMTP username
+      $mail->Password   = $mail_password;                         //SMTP password
       $mail->SMTPSecure = 'tls';                                  //Enable implicit TLS encryption
-      $mail->CharSet = 'UTF-8';
-      // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+      $mail->CharSet = 'UTF-8';                                   //Configura la codificación de caracteres
+      // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                   //Enable verbose debug output
 
       //Recipients
       $mail->setFrom('laesquinita@creativa.com', 'La esquinita creativa');
