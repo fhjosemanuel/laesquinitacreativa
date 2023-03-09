@@ -17,9 +17,9 @@ class ProductController{
     {
         return $this->ejecuta->create( $values );
     }
-    public function read( $id )
+    public function read()
     {
-        return $this->ejecuta->read( $id );
+        return $this->ejecuta->read();
     }
     public function update($fillable, $conditions)
     {
@@ -28,6 +28,11 @@ class ProductController{
     public function delete($id, $profile)
     {
         return $this->ejecuta->delete( $id, $profile );
+    }
+
+    public function readNameANDPrice()
+    {
+        return $this->ejecuta->readNameANDPrice();
     }
     /* INNER JOIN */
     public function readByCategory( $category )

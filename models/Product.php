@@ -22,7 +22,7 @@ class Product{
     {
         return $this->query->insert(self::$model, self::$fillable, $values);
     }
-    public function read( $id )
+    public function read()
     {
         return $this->query->get(self::$model, ["*"]);
     }
@@ -33,6 +33,10 @@ class Product{
     public function delete($id, $profile)
     {
         return $this->query->delete( self::$model, ["id = $id"] );
+    }
+
+    public function readNameANDPrice(){
+        return $this->query->get(self::$model." ORDER BY id DESC", ["id, name, price"]);
     }
 
     /* INNER JOIN */
