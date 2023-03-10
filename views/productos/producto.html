@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Productos</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Papeleria, carpetas, oficina, productos" name="keywords">
+    <meta content="La esquinita creativa" name="description">
+
+    <!-- Favicon -->
+    <link href="../../public/img/marca/La Esquinita Creativa.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://sfonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../../resources/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" rel="stylesheet" />
+    <link href="../../resources/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../resources/css/pproducto.css">
+</head>
+<body>
+    <header id="header"></header>
+    <div class="container-title">Carpeta</div>
+
+    <main>
+       <div class="container-img">
+        <img src="../../public/img/categorias/carpetas/libretadecubierta.jpg" alt="imagen-producto">
+       </div>
+       <div class="container-info-product">
+        <div class="container-price">
+            <span>$100.00</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+        <div class="container-details-product">
+            <div class="form-group">
+                <label for="colour">color</label>
+                <select name="colour" id="colour ">
+                    <option disable selected value="">Escoge una opcion</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="size">talla</label>
+                <select name="size" id="size ">
+                    <option disable selected value="">Elige una talla</option>
+                </select>
+            </div>
+            <button class="btn-clean">limpiar</button>
+        </div>
+
+        <div class="container-add-cart">
+            <div class="container-quantity">
+                <input type="number" placeholder="1" value="1" min="1" class="input-quantity">
+                <div class="btn-increment-decrement">
+                    <i class="fa-solid fa-chevron-up"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+            <button class="btn-add-to-cart">
+                <i class="fa-solid fa-plus"></i>
+                Añadir al carrito
+            </button>
+        </div>
+
+        <div class="container-description">
+            <div class="title-description">
+                <h4>Descripción</h4>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="text-description">
+                <p>Carpeta profesional con forrado de tela,con clave de seguridad pra paroteger documentos de
+                    alta peioridad
+                    </p>
+                </div>
+            </div>
+
+            <div class="container-additional-information">
+                <div class="title-additional-information">
+                    <h4>Información adicional</h4>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="text-additional-information">
+                    <p>------------</p>
+                </div>
+            </div>
+
+            <!-- RESEÑAS -->
+            <div class="container-reviews">
+                <div class="title-reviews">
+                    <h4>Reseñas</h4>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="text-reviews">
+                    <p>------------</p>
+                </div>
+            </div>
+            <!-- END RESEÑAS -->
+
+            <div class="container-social">
+                <span>Compartir</span>
+                <div class="container-buttons-social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+       </div>
+    </main>
+
+    <section class="container-related-products">
+        <h2>Productos Prediseñados</h2>
+        <div class="card-list-products">
+            <div class="card">
+                <div class="card-img">
+                    <img src="../../public/img/categorias/carpetas/libretadecubierta.jpg" alt="prediseño1">
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                        <h3>Carpeta Multifuncional</h3>
+                        <p class="category">Carpetas</p>
+                    </div>
+                    <div class="price">$85.00</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="../../public/img/categorias/carpetas/organizadordedinero.jpg" alt="prediseño2">
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                        <h3>Carpeta Multifuncional</h3>
+                        <p class="category">Carpetas</p>
+                    </div>
+                    <div class="price">$85.00</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="../../public/img/categorias/carpetas/carpetamulticolores.jpg" alt="prediseño3">
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                        <h3>Carpeta Multifuncional</h3>
+                        <p class="category">Carpetas</p>
+                    </div>
+                    <div class="price">$85.00</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="https://kit.fontawesome.com/d7e8e9c621.js" crossorigin="anonymous"></script>
+    <script src="../../resources/js/components.js"></script>
+    <script src="../../resources/js/producto.js"></script>
+    <script>
+        window.addEventListener("load", headerShow);
+        window.addEventListener("load", footerShow);
+        let verProductos = document.getElementById("verProductos");
+
+        function mostrarProductos() {
+            const valores = window.location.search;
+            const urlParams = new URLSearchParams(valores);
+            
+
+            let ajax = new XMLHttpRequest();
+
+            if (window.XMLHttpRequest) {
+                ajax = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                ajax = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            ajax.onreadystatechange = function() {
+                if( this.readyState === 4 && this.status === 200 ) {
+                    verProductos.innerHTML = this.responseText;
+                }
+            }
+
+            
+            
+            if(urlParams.has('categoria')){
+                var categoria = urlParams.get('categoria');
+                ajax.open("GET", "../../ajax/products/products.php?categoria="+categoria, true);
+            } else {
+                ajax.open("GET", "../../ajax/products/products.php", true);
+            }
+            ajax.send();
+        }
+        window.addEventListener("load", mostrarProductos);
+    </script>
+</body>
+</html>
