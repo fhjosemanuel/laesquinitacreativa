@@ -106,7 +106,7 @@
             
         }
         function redirecciona(){
-            window.location = "http://laesquinitacreativa.test/views/admin/home.php"
+            window.location = "http://laesquinitacreativa.test/views/admin/Procesar.php"
         }
     </script>
 </body>

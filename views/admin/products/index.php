@@ -37,22 +37,16 @@
         <div class="row px-xl-5 pb-3">
             <div class="col-12 col-md-6 pb-1">
                 <P>Nombre del producto: </P>
-                <input type="text" name="name" id="name" class="form-control">
+                <input type="text" name="nombreProducto" id="nombreProducto" class="form-control">
             </div>
             <div class="col-12 col-md-6 pb-1">
                 <P>Precio: </P>
-                <input type="text" name="name" id="name" class="form-control">
+                <input type="text" name="precioProducto" id="precioProducto" class="form-control">
             </div>
             <div class="col-12 col-md-6 pb-1">
                 <P>Categoria: </P>
-                <select name="category" id="category" class="form-control">
+                <select name="categoriaProducto" id="categoriaProducto" class="form-control">
                     <option value="">Selecciona una categoria</option>
-                    <option value="Carpetas">Carpetas</option>
-                    <option value="Agendas">Agendas</option>
-                    <option value="Mochilas">Mochilas</option>
-                    <option value="Fundas">Fundas</option>
-                    <option value="Bolsas">Bolsas</option>
-                    <option value="Manualidades">Manualidades</option>
                 </select>
             </div>
             <div class="col-12 col-md-6 pb-1">
@@ -129,6 +123,28 @@
     <script type="text/javascript">
         window.addEventListener("load", headerShowNoSearch);
         window.addEventListener("load", footerShow);
+        let categoriaProducto = document.getElementById("categoriaProducto");
+
+        function mostrarCategorias() {
+
+            let ajax = new XMLHttpRequest();
+
+            if (window.XMLHttpRequest) {
+                ajax = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                ajax = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            ajax.onreadystatechange = function() {
+                if( this.readyState === 4 && this.status === 200 ) {
+                    categoriaProducto.innerHTML = this.responseText;
+                }
+            }
+
+            ajax.open("POST", "../../ajax/products/optionsCategories.php", true);
+            ajax.send();
+        }
+        window.addEventListener("load", mostrarCategorias);
     </script>
 </body>
 
