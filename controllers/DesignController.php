@@ -1,12 +1,12 @@
 <?php
-require_once ("../../models/Product.php");
-class ProductController{
+require_once ("../../models/Design.php");
+class DesignController{
 
     private $ejecuta;
     
     public function __construct()
     {
-        $this->ejecuta = new Product();
+        $this->ejecuta = new Design();
     }
     public function id( $id )
     {
@@ -28,20 +28,6 @@ class ProductController{
     public function delete($id, $profile)
     {
         return $this->ejecuta->delete( $id, $profile );
-    }
-
-    public function readNameANDPrice()
-    {
-        return $this->ejecuta->readNameANDPrice();
-    }
-    /* INNER JOIN */
-    public function readByCategory( $category )
-    {
-        return $this->ejecuta->readByCategory( $category );
-    }
-    public function readByNameANDCategory( $name, $category )
-    {
-        return $this->ejecuta->readByNameANDCategory( $name, $category );
     }
 }
 ?>

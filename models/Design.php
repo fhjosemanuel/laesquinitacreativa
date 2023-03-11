@@ -1,13 +1,14 @@
 <?php
 require_once "Query.php";
-class Product{
+class Design{
     private $query;
-    private static $model = "products";
+    private static $model = "designs";
     private static $fillable = [
                                     'name',
+                                    'url',
                                     'description',
                                     'price',
-                                    'category_id'
+                                    'product_id'
                                 ];
     public function __construct()
     {
@@ -34,20 +35,6 @@ class Product{
     public function delete($id, $profile)
     {
         return $this->query->delete( self::$model, ["id = $id"] );
-    }
-
-    public function readNameANDPrice(){
-        return $this->query->get(self::$model." ORDER BY id DESC", ["id, name, price"]);
-    }
-
-    /* INNER JOIN */
-    public function readByCategory($category) {
-        $category = ucfirst($category);
-        return $this->query->get("categories cat, products pro",["pro.id","pro.name", "pro.description", "pro.price", "cat.name as category"],["pro.category_id = cat.id","cat.name='$category' ORDER BY pro.id DESC"]);
-    }
-    public function readByNameANDCategory($name, $category) {
-        $category = ucfirst($category);
-        return $this->query->get("categories cat, products pro",["pro.id","pro.name", "pro.description", "pro.price", "cat.name as category"],["pro.category_id = cat.id","pro.name = '$name'","cat.name='$category'"]);
     }
 }
 ?>

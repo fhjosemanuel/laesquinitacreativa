@@ -8,8 +8,6 @@
                             ('Fundas', 'public/categorias/fundas.webp'),
                                 ('Bolsas', 'public/categorias/bolsas.jpg');
 
-
--- DATOS NO REQUIRIDOS
     INSERT INTO products (id, name, description, price, category_id)
         VALUES (1, 'Agenda planificadora colorida', 'Diseños sin fecha y coloridos: La agenda de colores GoGirl no tiene fecha y dura todo un año, por lo que puedes empezar a usarla en cualquier momento y tomar un descanso sin perder páginas.', 445.11, 2);
             INSERT INTO galleries (url, product_id)
@@ -45,7 +43,7 @@
 
 
     INSERT INTO products (id, name, description, price, category_id)
-        VALUES (7, 'Mochila de Viaje Portátil Mochila Antirrobo Impermeable', 'ESPACIO DE ALMACENAMIENTO Y BOLSILLOS: 43 x 29 x 12 cm, un compartimento principal con múltiples bolsillos pequeños, con capacidad para un portátil de 15.6 pulgadas, bolsillos interiores para iPad, bolígrafos, batería, ratón, llaves, teléfonos, cargador, etc. 1 bolsillo lateral y 1 compartimento frontal con cremallera para su taza, paraguas, cuaderno y otras cosas pequeñas. Haciendo su bolsa organizada. [NOTA: Se adapta a portátiles de 15.6'' o menos.]', 229.00, 3);
+        VALUES (7, 'Mochila de Viaje Portátil Mochila Antirrobo Impermeable 2', 'ESPACIO DE ALMACENAMIENTO Y BOLSILLOS: 43 x 29 x 12 cm, un compartimento principal con múltiples bolsillos pequeños, con capacidad para un portátil de 15.6 pulgadas, bolsillos interiores para iPad, bolígrafos, batería, ratón, llaves, teléfonos, cargador, etc. 1 bolsillo lateral y 1 compartimento frontal con cremallera para su taza, paraguas, cuaderno y otras cosas pequeñas. Haciendo su bolsa organizada. [NOTA: Se adapta a portátiles de 15.6'' o menos.]', 229.00, 3);
             INSERT INTO galleries (url, product_id)
                 VALUES ('public/img/categorias/mochilas/mochiladeviajeportatil.jpg', 7);
 

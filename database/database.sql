@@ -21,6 +21,8 @@ CREATE OR REPLACE TABLE products (
   description LONGTEXT NOT NULL,
   price FLOAT(8,2) NOT NULL,
   category_id INT UNSIGNED NOT NULL,
+  CONSTRAINT products_name_category_id
+  UNIQUE(name,category_id),
   CONSTRAINT products_categories_category_id_fk
   FOREIGN KEY (category_id) REFERENCES categories(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
