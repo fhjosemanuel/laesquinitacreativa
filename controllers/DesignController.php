@@ -29,5 +29,10 @@ class DesignController{
     {
         return $this->ejecuta->delete( $id, $profile );
     }
+
+    public function readByIDProduct( $id )
+    {
+        return $this->ejecuta->readByIDProduct( $id );
+    }
 }
 ?>

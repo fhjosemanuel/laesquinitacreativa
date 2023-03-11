@@ -20,6 +20,10 @@ main{
     background-color: #f7f7f9;
     flex: 1;
 }
+.imgProducto{
+    width: 450px;
+    max-height: 550px;
+}
 
 .container-info-product{
     flex: 1;

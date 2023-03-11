@@ -36,5 +36,10 @@ class Design{
     {
         return $this->query->delete( self::$model, ["id = $id"] );
     }
+
+    public function readByIDProduct( $id )
+    {
+        return $this->query->get(self::$model, ["*"], ["product_id = $id"]);
+    }
 }
 ?>
