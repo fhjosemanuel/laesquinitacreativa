@@ -1,3 +1,4 @@
 /vendor
-
+/public/img/bocetos
+/public/img/categorias
 .env
