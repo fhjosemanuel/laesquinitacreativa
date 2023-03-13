@@ -77,12 +77,12 @@ function newPasswordValidation() {
             </button>
           </div>
           `);
+          $("#modifica").html(`
+            <a class="btn btn-primary btn-block" href="../../login.html">Ir a inicio de sesión</a>
+          `);
           setTimeout(function() {
             $("#alert").fadeOut(function(){
               document.getElementById("alert").remove();
-              if (response.redirect) {
-                window.location.href = response.redirect;
-              }
             });
           }, 3500); // El mensaje se ocultará después de 5 segundos (3500 ms)
         },

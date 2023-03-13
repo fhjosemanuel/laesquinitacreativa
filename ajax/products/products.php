@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "../../controllers/ProductController.php";
 require_once "../../controllers/GalleriesController.php";
 
@@ -27,7 +28,7 @@ if(isset($_GET["categoria"])) {
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
-                            <a href="./producto.html?search='.$producto["id"].'" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Ver Detalles</a>
+                            <a href="../../views/productos/producto.html?search='.$producto["id"].'" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Ver Detalles</a>
                             <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Agregar al carrito</a>
                         </div>
                     </div>
@@ -59,8 +60,18 @@ if(isset($_GET["categoria"])) {
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
-                            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Ver Detalles</a>
-                            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Agregar al carrito</a>
+                            <a href="../../views/productos/producto.html?search='.$producto["id"].'" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Ver Detalles</a>
+                            ';
+                            if(isset($_SESSION['user_name'])) {
+                                $html .= '
+                                <a href="#definido" class="btn btn-sm text-dark p-0" data-toggle="modal" data-target="#noFound"><i class="fas fa-shopping-cart text-primary mr-1"></i>Agregar al carrito</a>
+                                ';
+                            } else {
+                                $html .= '
+                                <a href="#nodenifo" class="btn btn-sm text-dark p-0" data-toggle="modal" data-target="#registroModal"><i class="fas fa-shopping-cart text-primary mr-1"></i>Agregar al carrito</a>
+                                ';
+                            }
+                            $html .= '
                         </div>
                     </div>
                 </div>

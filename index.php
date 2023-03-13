@@ -117,17 +117,7 @@
         <div class="text-center mb-4">
             <h2 class="section-title px-5"><span class="px-2">Categorias</span></h2>
         </div>
-        <div class="row px-xl-5 pb-3" id="verCategorias">
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
-                    <p class="text-right">15 Products</p>
-                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="public/img/cat-1.jpg" alt="">
-                    </a>
-                    <h5 class="font-weight-semi-bold m-0">Men's dresses</h5>
-                </div>
-            </div>
-        </div>
+        <div class="row px-xl-5 pb-3" id="verCategorias"></div>
     </div>
     <!-- Categories End -->
 
@@ -136,42 +126,50 @@
         <div class="text-center mb-4">
             <h2 class="section-title px-5"><span class="px-2">Productos</span></h2>
         </div>
-        <div class="row px-xl-5 pb-3" id="verProductos">
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1" >
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="public/img/product-1.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="row px-xl-5 pb-3" id="verProductos"></div>
     </div>
     <!-- Products End -->
 
-
-    <!-- Register Start -->
-    <div class="container-fluid bg-secondary my-5">
-        <div class="row justify-content-md-center py-5 px-xl-5">
-            <div class="col-md-6 col-12 py-5">
-                <div class="text-center mb-2 pb-2">
-                    <h2 class="section-title px-5 mb-3"><span class="bg-secondary px-2">¿Qué esperas?</span></h2>
+    <!-- Modal Register Start -->
+        <div class="modal fade bd-example-modal-xl" id="registroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                <div class="modal-content bg-secondary">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <h2 class="section-title px-5 mb-3 text-center"><span class="bg-secondary text-center px-2">¿Qué esperas?</span></h2>
                     <p>Ve, escoge, diseña, agrega y compra.</p>
-                    <a href="register.html" class="btn btn-primary px-4">Regístrate</a>
+                </div>
+                <div class="modal-footer text-center justify-content-center mb-4">
+                    <a href="register.html" class="btn btn-primary text-center">Regístrate</a>
+                </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Register End -->
+    <!-- Modal Register End -->
+
+    <!-- Modal NoFound Start -->
+        <div class="modal fade bd-example-modal-xl" id="noFound" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                <div class="modal-content bg-secondary">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <h2 class="section-title px-5 mb-3 text-center"><span class="bg-secondary text-center px-2">Funcionalidad no desarrollada</span></h2>
+                    <p>Se espera desarrollarse en el segundo sprint</p>
+                </div>
+                <div class="modal-footer text-center justify-content-center mb-4">
+                </div>
+                </div>
+            </div>
+        </div>
+    <!-- Modal Nofound End -->
 
     <!-- Footer Start -->
     <footer id="footer"></footer>
@@ -242,7 +240,6 @@
                     verProductos.innerHTML = this.responseText;
                 }
             }
-
             
             ajax.open("GET", "ajax/products/products.php", true);
             ajax.send();
